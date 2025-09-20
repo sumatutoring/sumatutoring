@@ -11040,3 +11040,13 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+/* Logo pop styles */
+.navbar-brand img {
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
