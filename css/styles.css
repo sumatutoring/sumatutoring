@@ -11050,3 +11050,28 @@ html {
 .navbar-brand img:hover {
     transform: scale(1.1);
 }
+
+/* Enlarge logo and keep navbar height reasonable */
+.navbar-brand img.logo {
+  height: 70px; /* bigger logo */
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5)); /* subtle shadow to pop */
+  transition: transform 0.3s;
+}
+
+/* Optional hover effect */
+.navbar-brand img.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Align navbar-brand text nicely */
+.navbar-brand span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff; /* or your accent color */
+}
+
+/* Keep navbar height reasonable even with bigger logo */
+.navbar {
+  min-height: 70px;
+}
