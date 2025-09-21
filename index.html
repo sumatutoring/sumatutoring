@@ -42,11 +42,17 @@
 
     /* Masthead */
     header.masthead {
-      background: var(--navy);
+      background: var(--navy) url("assets/img/math-pattern.png") center/cover no-repeat;
       color: var(--white);
       text-align: center;
       padding: 8rem 2rem;
       position: relative;
+    }
+    header.masthead::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(11,31,58,0.85); /* dark overlay */
     }
     header .masthead-heading {
       font-size: 3rem;
