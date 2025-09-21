@@ -41,20 +41,12 @@
     }
 
     /* Masthead */
-    header.masthead {
-      background: var(--navy);
-      position: relative;
-      color: var(--white);
-      text-align: center;
-      padding: 8rem 2rem;
-    }
-
-    header.masthead::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4); /* black overlay */
-    }
+      header.masthead {
+        background: var(--navy);
+        ...
+        background-color: rgba(0,0,0,0.4); /* overrides navy */
+        background-blend-mode: overlay;
+      }
     header .masthead-heading {
       font-size: 3rem;
       font-weight: 700;
