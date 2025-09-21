@@ -43,13 +43,17 @@
     /* Masthead */
     header.masthead {
       background: var(--navy);
+      position: relative;
       color: var(--white);
       text-align: center;
       padding: 8rem 2rem;
-      position: relative;
-        /* Semi-transparent black overlay using rgba */
-      background-color: rgba(0,0,0,0.4); /* adjust 0.4 to change opacity */
-      background-blend-mode: overlay; /* blends the color with the image */
+    }
+
+    header.masthead::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4); /* black overlay */
     }
     header .masthead-heading {
       font-size: 3rem;
