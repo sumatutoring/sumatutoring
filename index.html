@@ -42,7 +42,7 @@
 
     /* Masthead */
     header.masthead {
-      background: var(--navy) url("assets/img/math-pattern.png") center/cover no-repeat;
+      background: var(--navy) url("/sumatutoring/assets/img/math-pattern.png") center/cover no-repeat;
       color: var(--white);
       text-align: center;
       padding: 8rem 2rem;
@@ -110,7 +110,7 @@
     .btn-primary:hover {
       background: #24b3a6;
     }
-bs
+
     /* Footer */
     footer {
       background: var(--navy);
@@ -171,7 +171,7 @@ bs
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="assets/img/logo.png" alt="Suma Tutoring Logo" height="75">
+        <img src="/sumatutoring/assets/img/logo.png" alt="Suma Tutoring Logo" height="75">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -198,41 +198,35 @@ bs
         Personalized remote one-on-one tutoring for all ages.
       </p>
       <a href="#contact" class="btn btn-primary">Book My Session</a>
-      </a>
     </div>
   </header>
 
   <!-- Subjects Section -->
-<section id="subjects">
-  <h2 class="section-heading">Subjects We Cover</h2>
-  <div class="container">
-    <div class="subject-container">
-
-      <div class="subject-box">
-        <h5>Algebra & Geometry</h5>
-        <div class="details">
-          <p>Master the foundations of problem solving, equations, and geometric reasoning.</p>
+  <section id="subjects">
+    <h2 class="section-heading">Subjects We Cover</h2>
+    <div class="container">
+      <div class="subject-container">
+        <div class="subject-box">
+          <h5>Algebra & Geometry</h5>
+          <div class="details">
+            <p>Master the foundations of problem solving, equations, and geometric reasoning.</p>
+          </div>
+        </div>
+        <div class="subject-box">
+          <h5>Calculus & Precalculus</h5>
+          <div class="details">
+            <p>Build intuition with derivatives, integrals, and mathematical modeling.</p>
+          </div>
+        </div>
+        <div class="subject-box">
+          <h5>Statistics & Data Science</h5>
+          <div class="details">
+            <p>Learn probability, data interpretation, and real-world applications.</p>
+          </div>
         </div>
       </div>
-
-      <div class="subject-box">
-        <h5>Calculus & Precalculus</h5>
-        <div class="details">
-          <p>Build intuition with derivatives, integrals, and mathematical modeling.</p>
-        </div>
-      </div>
-
-      <div class="subject-box">
-        <h5>Statistics & Data Science</h5>
-        <div class="details">
-          <p>Learn probability, data interpretation, and real-world applications.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Approach Section -->
   <section id="approach" style="background: var(--white);">
@@ -309,43 +303,38 @@ bs
   </section>
 
   <!-- Contact Section -->
-<!-- Contact Section -->
-<section id="contact">
-  <h2 class="section-heading text-center">Get in Touch</h2>
-  <p class="lead text-center mb-5">Have questions or want to schedule a session? Fill out the form below.</p>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <form action="https://formsubmit.co/sumatutoring@gmail.com" method="POST">
-          <!-- Hidden input to prevent CAPTCHA page -->
-          <input type="hidden" name="_captcha" value="false">
-          <!-- Optional redirect after submission -->
-          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-
-          <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-          </div>
-
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary w-100">Send Message</button>
-        </form>
+  <section id="contact">
+    <h2 class="section-heading text-center">Get in Touch</h2>
+    <p class="lead text-center mb-5">Have questions or want to schedule a session? Fill out the form below.</p>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form action="https://formsubmit.co/sumatutoring@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
