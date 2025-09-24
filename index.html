@@ -119,6 +119,7 @@
       padding: 2rem;
       text-align: center;
     }
+    /* Subject Boxes */
     .subject-box {
       position: relative;
       width: 280px;
@@ -134,7 +135,7 @@
     }
 
     .subject-box:hover {
-      transform: scale(1.05); /* Slight scale to avoid layout shifts */
+      transform: scale(1.05); /* Slight zoom effect */
       z-index: 10;
       overflow: visible;
     }
@@ -151,8 +152,8 @@
       background: rgba(11, 31, 58, 0.95);
       padding: 0.75rem;
       border-radius: 8px;
-      max-height: 120px;   /* limit size */
-      overflow-y: auto;    /* scroll if content exceeds */
+      max-height: 120px;   /* limit visible area */
+      overflow-y: auto;    /* scroll if text is too long */
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -178,6 +179,29 @@
       gap: 2rem;
     }
 
+    /* Mobile-friendly adjustments */
+    @media (max-width: 768px) {
+      .subject-box {
+        width: 100%;        /* full width on small screens */
+        max-width: 500px;   /* don’t let it get too wide */
+        height: auto;       /* let box expand with content */
+      }
+
+      .subject-box .details {
+        max-height: 200px;  /* bigger area for text */
+        overflow-y: auto;   /* scroll if still too long */
+        opacity: 1;         /* always show details (no hover on mobile) */
+      }
+    }
+
+    /* Optional: Custom scrollbar for details */
+    .subject-box .details::-webkit-scrollbar {
+      width: 6px;
+    }
+    .subject-box .details::-webkit-scrollbar-thumb {
+      background: var(--teal);
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -375,4 +399,6 @@
     </div>
   </div>
 </section>
+
+
 
